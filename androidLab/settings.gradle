@@ -22,3 +22,4 @@ include ':ch15'
 include ':ch17'
 
 
+include ':exam2'
