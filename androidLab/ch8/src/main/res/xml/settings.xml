@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:summary="A Settings Summary"
+        app:fragment="com.example.ch8.ASettingFragment"
+        app:key="a"
+        app:title="A Settings" />
+
+    <Preference
+        android:summary="B Settings Summary"
+        app:fragment="com.example.ch8.BSettingFragment"
+        app:key="b"
+        app:title="B Settings" />
+
+    <Preference
+        app:key="activity"
+        app:title="Launch activity">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://www.google.com" />
+
+    </Preference>
+
+    <EditTextPreference
+        app:key="id"
+        app:title="ID 설정" />
+
+    <ListPreference
+        android:entries="@array/my_color"
+        android:entryValues="@array/my_color_value"
+        app:key="color"
+        app:title="색상 선택" />
+
+</PreferenceScreen>

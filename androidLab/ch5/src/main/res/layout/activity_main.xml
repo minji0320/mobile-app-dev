@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/add"
+            app:tint="#00FF00" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="연락처에 추가"
+            android:textColor="#00FF00"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="02-120"
+        android:textSize="40sp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:columnCount="3"
+        android:orientation="horizontal">
+
+        <!-- GridLayout 하위에 추가되는 view는 width, height가 기본적으로 wrap_content라서 지정 안 해도 됨   -->
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="1"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="2"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="3"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="4"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="5"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="6"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="7"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="8"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="9"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="*"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="0"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="10dp"
+            android:text="#"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/icon_video"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/video" />
+
+        <ImageView
+            android:id="@+id/icon_call"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/icon_video"
+            android:src="@drawable/call" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/icon_call"
+            android:src="@drawable/back" />
+
+    </RelativeLayout>
+
+</LinearLayout>
