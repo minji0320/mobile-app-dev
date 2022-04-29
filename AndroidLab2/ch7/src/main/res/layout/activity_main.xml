@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.example.ch7.event.EventHandler" />
+        <!-- include 다른 xml 해도 다른 xml에 영향을 못 미침-->
+        <variable
+            name="user"
+            type="com.example.ch7.model.User" />
+
+        <variable
+            name="data"
+            type="String" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{user.name + ` - ` + user.address + ` - ` + user.phone}"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- BindingAdapter -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                bind:sum="@{10}" />
+
+            <!-- Two way data Binding -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={data}" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> EventHandler.onClick(data)}"
+                android:text="two way"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

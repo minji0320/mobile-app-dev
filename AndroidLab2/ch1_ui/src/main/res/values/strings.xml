@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ch1_UI</string>
+    <string name="drawer_open">opened drawer</string>
+    <string name="drawer_close">closed drawer</string>
+</resources>
